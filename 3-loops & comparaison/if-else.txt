@@ -1,0 +1,7 @@
+if ( i in 4..7) continue
+
+we cannot loop over an integer but it has the contains method
+(4..7).contains(i)
+
+val prefix = if ( i in 4..7) "-" else "--"
+// here it is like an expression

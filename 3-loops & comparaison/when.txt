@@ -1,0 +1,14 @@
+when(time){
+    in 0..11 -> println("haah")
+    12 -> println("hahihhi")
+    else -> println("bye")
+}
+
+val greeting = when ( time){
+    13 , 14 -> {
+        println("time for a nap")
+        "Time for a nap"
+    }
+    else -> "Good day"
+}
+println(greeting)

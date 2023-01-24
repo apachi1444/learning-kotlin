@@ -1,0 +1,8 @@
+// here the parameter
+fun greet(name :String){
+    println("hi $name")
+}
+
+// here the argument ofc when we call the function
+greet("Yessine")
+
