@@ -1,0 +1,15 @@
+- write the code more functional to avoid the side effects
+// the forEach function takes a function in the parameter
+// and returns Unit
+array.forEach{
+    println(it)
+}
+
+- when we have {} : the lambda function syntax in Kotlin
+- when we have a function that takes another function
+in its parameter
+- HOC : takes a function as a parameter or return a function
+
+- array.forEachIndexed {
+    index , item -> blablabla ..
+}

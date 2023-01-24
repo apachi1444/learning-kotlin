@@ -17,3 +17,21 @@ class User(val name : String , val age : Int){
 // we can also pass in the class named and default properties
 class User(val name : String = "No Name" , val age : Int)
 val user = User(age = 60)
+
+---------- init block --------------------------------
+when the object is created the init block gets executed !
+class User(name : String = "No Name" , val age : Int){
+    val name : String
+    init{
+        if ( name.isBlank()){
+            this.name = "No Name"
+        }else{
+            this.name = name.trim()
+        }
+    }
+
+    // we can add some other blocks init
+    // and all these treatments will be in the compilation 
+    // in the constructor body of our class !
+    
+}

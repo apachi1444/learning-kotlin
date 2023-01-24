@@ -1,0 +1,13 @@
+- designed for developing the cross platform projects
+it reduces time spent writing and maintaining the same code for
+different platforms
+
+- use cases :
+
+    - they have in common ofc common Kotlin
+    which includes the language , core libraries 
+    and basic tools
+
+    1 - Kotlin/Native -> transformed into Native code
+    2 - Kotlin/Js -> transformed into js code
+    3 - Kotlin/JVM -> transformed into jvm code
