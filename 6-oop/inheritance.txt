@@ -1,0 +1,17 @@
+- classes in kotlin are by default closed to inheritance
+- to make them open to inheritance we should add "open"
+open class
+
+in the mother class 
+for example we have 
+
+// we cannot access it outside both classes !
+protected open val sessionId = "hahah"
+
+
+class ChildClass : MotherClass(){
+    override val providerInfo : String
+        get() = super.providerInfo
+        // or 
+        get() = "new value of the provider Info"
+}

@@ -33,5 +33,34 @@ class User(name : String = "No Name" , val age : Int){
     // we can add some other blocks init
     // and all these treatments will be in the compilation 
     // in the constructor body of our class !
-    
+
+}
+
+- if the class does not have a primary or secondary constructor
+the compiler will generate by default a constructor with no arguments
+
+- class Members are : 
+    * constructors and initializers blocks
+    * functions
+    * properties
+    * nested and inner classes
+    * objects declarations
+
+- Even if the class has no primary constructor, the delegation 
+still happens implicitly, and the initializer blocks are still 
+executed
+
+class Constructors {
+    init {
+        println("Init block")
+    }
+
+    constructor(i: Int) {
+        println("Constructor $i")
+    }
+}
+
+// this is the delegation function
+constructor(name: String, parent: Person) : this(name) {
+        parent.children.add(this)
 }
