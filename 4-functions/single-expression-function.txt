@@ -1,0 +1,9 @@
+when we have a function with a simple expression
+(one statement)
+( for example return num * 2 )
+
+// we use the single expression function
+fun double(num:Int) : Int = num * 2
+
+// another example
+fun getMax(a:Int, b:Int) : Int = a > b ? a : b

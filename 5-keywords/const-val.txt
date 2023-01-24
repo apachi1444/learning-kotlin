@@ -1,0 +1,15 @@
+when we use the const val in our program
+we create the compile time constant
+to tell the compiler that this variable is not meant to be
+changed
+- also tell the compiler that whenever you see this variable
+you must insert the value directly in the variable
+
+- we cannot create const val inside a function because functions
+are executed when the program is running !
+
+- not const var ofc !
+
+- public static final String in JAVA
+
+- we can use the const val with String and the primitive types !

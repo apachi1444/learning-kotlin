@@ -1,0 +1,3 @@
+oop is a programing paradigm
+style of programming 
+a way of mapping a problem to a software solution

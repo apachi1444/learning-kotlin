@@ -1,0 +1,10 @@
+// default param for the reps = 1
+// we always have to write the type of the variable explicitly
+// like we cannot do reps = 1 !!! 
+
+fun greet(name : String ,reps : Int = 1){
+    println("Hello World")
+}
+
+// in the main function when we call the greet function
+greet("Yessine")

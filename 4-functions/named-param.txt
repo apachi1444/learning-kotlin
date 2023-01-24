@@ -1,0 +1,16 @@
+when we use the default param in our function we can 
+sometimes want to change only the second parameter
+but how we gonna tell the compiler we need to pass
+only the second argument not the first argument
+
+-> we must use the named parameter in our function
+// reps in this case is the second argument
+// tell the compiler which parameter we need to change 
+greet(reps = 5)
+
+// we can pass unnamed arguments before named ones
+// we can also name all our arguments
+
+// suppose that we have the greet function which got as
+// parameters 3 ones !
+greet(message = "" , name = "" , reps = 5)

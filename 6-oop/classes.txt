@@ -1,0 +1,19 @@
+- to pass the vars in the constructor
+
+class User(name : String , age : Int){
+    // these are properties of the class
+    // properties can't stay uninitialized
+    // !! val name : String !! -> error !
+    // properties form the state of our objects !
+    val name = name
+    val age = age
+}
+
+// we can directly pass the properties to the constructor
+class User(val name : String , val age : Int){
+
+}
+
+// we can also pass in the class named and default properties
+class User(val name : String = "No Name" , val age : Int)
+val user = User(age = 60)

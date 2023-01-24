@@ -1,0 +1,39 @@
+we use it when we don't know the number of args that we have
+in our function
+
+// here numbers will be IntArray not normal Array
+fun getSum(vararg numbers : Int) : Int {
+    var sum = 0
+
+    for ( number in numbers ) sum+= number
+
+    return sum
+}
+
+// then in the main function we must call the getSum function
+-> so we must first
+fun main(){
+    println(getSum(1,2,3,3))
+
+    // in the case that we want to call inside the getSum
+    // an Array we cannot pass it as a parameter
+
+    var array = intArrayOf(1,2,3,3)
+    println(getSum(*array))
+
+    // * operator is : spread operator
+}
+
+
+
+!!!!! rq !
+
+- the vararg uses by default the array of the primitive
+types not the object types !
+
+it is good to pass the vararg as the last parameter in the 
+function because the compiler will not know when the list
+of arguments will finish when we call the function
+
+or to avoid this problem we can use the named parameters
+in our function
