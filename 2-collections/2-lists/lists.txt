@@ -1,0 +1,8 @@
+- its subtype is mutableList
+- both have different implementations:
+ArrayList and LinkedList
+- List<T> doesn't have modifying methods ( 
+    read-only view of mutableList<T> ( in the mutable we can change elements )
+)
+- not fixed size !
+- List<> is covariant with List<Number>

@@ -1,0 +1,22 @@
+we directly access the object properties by their name in Kotlin
+without worrying about getter or setter !
+
+compiler will generate getter for val
+compiler will generate getter and setter for var
+
+- we can do default values in the constructor
+class User(val firstName = "Yessine")
+
+- to override the default behaviour of these methods
+var nickName  : String? = null
+    set(value){
+        fields = value
+        // till now this the default behaviour
+        println("we add something new to our new setter")
+    }
+    get(){
+        println("return value is this is the new getter of this property !")
+    }
+
+- to avoid if else 
+we can use directly val newValue = nickName ?: "no nickName"

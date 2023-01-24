@@ -1,0 +1,5 @@
+in kotlin , classes / methods / properties are public by default !
+
+- internal : public in the same module
+- private : 
+- protected 

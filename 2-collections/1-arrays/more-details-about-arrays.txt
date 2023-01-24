@@ -1,0 +1,10 @@
+- sequential fixed-size memory region
+- is mutable ( can be changed through any reference to it)
+( we can change the content of their items )
+- has fixed size and cannot expand or shrink
+- arrays are optimized for primitive types
+( IntArray , DoubleArray .. )
+which are mapped to java primitive arrays ( int[] )
+ ! but boxed ones ( Array<Int> mapped to Java's Integer[] )
+- arrays are invariant on T ( Array<Int> is not Array<Number>)
+( same for mutableList)

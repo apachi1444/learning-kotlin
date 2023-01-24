@@ -1,0 +1,20 @@
+if we have interface 
+
+and a class which implements the interface
+we can make it abstract to avoid implements methods
+
+override fun .... 
+class ClassImplementation : NameInterface , AnotherInterface
+
+- interfaces : can have default implementation
+- and we can of course override these default methods !
+- but property initializer in interface is not allowed !
+we cannot do val string : String = "String"
+
+- but we must do val string : String
+- and then in the implementation we must do
+
+- override val string : String
+                get() = "my new String in class implementation"
+
+- object is nameClass | object instance of nameClass in JAVA

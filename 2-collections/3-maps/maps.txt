@@ -1,0 +1,5 @@
+- key value pairs
+val map = mapOf(1 to "a" , 2 to "b")
+
+val mutableMap = mutableMapOf(1 to "a", 2 to "b)
+mutable.put(4 ,"d" )
