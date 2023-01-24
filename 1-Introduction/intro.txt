@@ -1,0 +1,51 @@
+Kotlin was invented in 2011
+but the first big 1.0 was released in 2016
+
+it is concise : it reduces the amount of boilerplate code !
+it is safe : avoid entire classes of errors such as null pointer exceptions
+it is interoperable : with java , share the same JVM , java bytecode
+
+gets the android support in google I/O 2017
+the JDK is the java SDK
+
+- external libraries contains the java/kotlin standard libraries 
+- the main function is the entry function of our program
+
+- also the main function must not be in a class without the arguments also of args
+- it's called the top level function of our program
+
+- kotlin compiler compiles the kotlin code into jvm bytecode
+- it's a statically typed language , checks for the types at compile time not runtime
+
+- val : stands for value : can't be changed overtime in our program equivalent to final in JAVA
+- Ctrl + Shift  + P : to know the type of the variable
+- \$userName to avoid the special character
+
+- Int : then press Ctrl + B : open the class in a separate file
+- val exampleNumber  = 28L ( to specify that we need a long number ) : 28 is called "literal"
+
+- to use large numbers we can user "_" : 2_000_000.8
+- double then float
+
+- String is not a primitive variable because the jvm stores that variable differently than
+the primitive ones
+
+- in kotlin we don't use the primitive types directly we use the object first then
+the compiler converts that variable into a primitive one !
+
+- println("${}") -> string template and inside it we must put an "expression" : which give us a value
+like functions toInt() which returns a value
+so inside of the string template we cannot put an assignment for example
+( a = a + 2 ) cuz it won't return a value
+
+- before in java when we do a = b = c = 3 
+means like c = 3 will return a value to b and b = 3 will return a value to a
+which is not allowed in kotlin
+
+- for example a++ ( unary operator : one operand ) is an expression because it does something and returns something
+in the same time !
+
+- unary operation uses the prefix / postfix operator but the binary operation uses the "infix" 
+
+- there is a tool in intellij / Android Studio called "REPL" to test code without running the whole program
+( Read , Eval , Print , Loop )

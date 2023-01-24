@@ -1,0 +1,27 @@
+an expression is a word or group of words or symbols
+that is a value
+
+an expression in programming is a value or something 
+that returns a value or anything that executes and ends up
+being a value
+
+a statement is a group of expressions
+they either do tasks or don't do them
+any statement that can return a value is automatically 
+qualified to be used as an expression
+
+let amount = $2000
+compilers and interpreters don't execute any standalone expression
+
+add(2,3) -> is a statement
+but const result = add(2,3) is an expression
+
+- some programmers avoid if statements by using the ternary operator 
+to avoid side effects !
+
+side effect is : modifying some state variable value outside its local environment
+or we can say uses or changes stuff outside its scope
+
+that s why people prefer writing pure functions ( functions without side effects )
+In a nutshell, a function is said to have side effects when it depends on or modifies 
+a state outside its scope
