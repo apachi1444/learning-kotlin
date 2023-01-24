@@ -1,0 +1,20 @@
+whatever we need to loop over
+needs an items called "iterator" : 
+it's all about a piece of code that gives us 
+each element one by one
+
+for ( name in names ) println(name)
+for ( i in 1..10 ) println(i)
+// 1 .. 10 is IntRange which has an iterator
+// 1 and 10 are included
+
+for ( i in 1 until 10 ) println(i)
+// 10 is not included
+
+for ( i in 10 downTo 1 ) println(i)
+// all numbers are included
+
+for ( i in 1..10 step 2) println(i)
+// or we can type directly 1.inRange(10).step(2)
+
+for ( i in names.indices) println("$names[i] has the value of $i")

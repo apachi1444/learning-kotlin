@@ -1,0 +1,18 @@
+val names = arrayOf("Jim", "John")
+names[0] = "hahaha"
+we cannot change the array reference
+
+val multipleTypesInArray = arrayOf("John", 2)
+
+val multiDimensionalArray = arrayOf(
+    arrayOf(1,2,3), // first line
+    arrayOf(1,2,3), // second line
+    arrayOf(1,2,3), // third line
+) 
+
+in the jvm we use the object types not the primitive ones as usual
+arrayOf(1,2) Integer[]
+intArrayOf(1,2) int[]
+IntArray(9) int[9]
+
+- names.last() will give us the last element of the array
