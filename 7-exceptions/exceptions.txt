@@ -1,0 +1,23 @@
+All exception classes in Kotlin inherit the Throwable class. Every exception has a message, a stack trace, and an optional cause.
+
+Try is an expression which means it returns a value
+
+val a : Int? = try {input.toInt()} catch(e:NumberFormatException) {null}
+
+The returned value of a try expression is either the last expression in the 
+try block or the last expression in the catch block (or blocks). 
+The contents of the finally block don't affect the result of the expression.
+
+throw is an expression
+val s = person.name ?: throw IllegalArgumentException("Name required")
+
+throw has the type Nothing , this type has no values and is used 
+to mark code locations that can never be reached 
+
+fun fail(message: String): Nothing {
+    throw IllegalArgumentException(message)
+}
+
+we encounter the type "Nothing" when dealing with type inference
+val x = null 
+-> the compiler will infer the Nothing? type to this variable
