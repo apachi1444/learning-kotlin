@@ -10,3 +10,4 @@ when we do obj1==obj2 it will compare depending on the logic that we did in the 
 But if the user want to check for true object equality
 this is where === comes into play
 to check the memory location
+test
