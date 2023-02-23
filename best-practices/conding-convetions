@@ -1,0 +1,28 @@
+
+- Coding Conventions :
+
+Source file names : if a file contains multiple classes choose a name describing what the file contains and name the file accordingly
+Name of file should describe what the code in the file does
+Therefore you should avoid using meaningless words such Util in file names.
+
+Class Layout : declarations should be in this order
+1/ Property declarations and initializer blocks
+2/ Secondary constructors
+3/ Method declarations
+4/ Companion object
+* and for the order of methods put related stuff together so that someone reading the code from top to bottom can follow the logic of what’s happening !
+* Put nested classes next to code that uses those classes and if these classes are used outside the main put them after the companion object !
+
+Interface implementation layout :
+keep the implementing members in the same order as members of the interface
+
+Naming rules :
+* packages : always lowercase and do not use underscores , using the multiple words is generally discouraged but if you do make if CamelCase
+* functions : start with lowercase and use CamelCase
+Exception: factory functions used to create instances of classes can have the same name as the abstract return type:
+interface Foo { /*...*/ }
+
+class FooImpl : Foo { /*...*/ }
+
+fun Foo(): Foo { return FooImpl() }
+* property names : names of constant or object val properties with no custom get that hold surely immutable data ! Const val MAX_COUNT = 0

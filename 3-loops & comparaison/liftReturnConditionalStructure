@@ -1,0 +1,6 @@
+instead of having the return inside every line of the conditional structure
+return when(n){
+		0 →0
+		1 → 1
+		else → 5
+	}

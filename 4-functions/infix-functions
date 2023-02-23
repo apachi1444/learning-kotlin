@@ -1,0 +1,26 @@
+if a function is called using infix notation means calling without using parenthesis and dot
+1- Standard librayr infix function function notation
+2- User defined infix function notation
+
+* (a > b) and (a > c) if we use dot and parentheses it would be
+like this : (a > b).and(a > c)
+
+* User defined infix function notation :
+- it must be a member function or extension functions
+- it must accept a single parameter
+- the parameter must not accept variable number of arguments and must have no default value
+- “infix” keyword !
+
+class math {
+// user defined infix member function
+    infix fun square(n : Int): Int{
+        val num = n * n
+        return num
+    }
+}
+fun main(args: Array<String>) {
+   val m = math()
+    // call using infix notation
+    val result = m square 3
+    print("The square of a number is: "+result)
+}

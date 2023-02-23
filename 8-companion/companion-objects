@@ -1,0 +1,33 @@
+- Companion Objects :
+
+there are singleton objects whose properties and functions are tied to tied to a class but not to the instance of a class !
+
+Properties in the companion object can be referenced “statically”
+as ContainingClass.PROPERTY_IN_COMPANION_OBJECT
+or ContainingClass.Companion.PROPERTY
+
+default name is “Companion” if we use companion object { … }
+if we want to change its default name companion object AnotherName { }
+
+- We cannot have two companion objects !
+
+* Making our object implementing an interface
+
+interface Drinkable {
+  fun drink(): String
+  val LATTE: String
+}class Cafe {
+  companion object Beverage : Drinkable {
+    override fun drink() = "i like coffee"
+    override val LATTE = "latte"
+  }
+}
+Cafe.drink() → call it directly !
+
+Why use the companion not the regular one !
+
+- unlike the companion gets a default name but the regular one must be named !
+- with regular I need to write Cafe.ObjectName.Property
+but with companion we use directly Cafe.Property !
+- companion objects are initialized the first time the containing class is loaded even it is not used → not lazy !
+But regular ones are initialized the first time they are accessed !

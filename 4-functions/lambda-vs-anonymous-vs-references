@@ -1,0 +1,43 @@
+– Lambda Expressions
+lambda expressions and anonymous functions are function literals :
+which are not declared but are passed immediately as an expression
+
+if the inferred return type of the lambda ks not Unit , the last expression inside the lambda body is treated as the return value.
+
+–-- trailing lambda :
+* if the last parameter is a function
+
+---- return a value from a lambda expression
+ints.filter{
+	val shouldFilter = it > 0
+	return@filter shouldFilter
+}
+
+val stringPlus: (String, String) -> String = { a, b ->
+	 a + b
+}
+max(strings, { a, b -> a.length < b.length })
+// when we use directly the function reference
+val stringPlus: (String, String) -> String = String::plus
+
+– Anonymous functions
+if you want to use an explicit return type in a lambda use the anonymous
+
+fun(x : Int , y : Int) : Int{
+	return x + y
+}
+
+the diff from a regular function is that the name is omitted !
+
+ints.filter(fun(item) = item > 0)
+
+
+Function references : we can shorten our code by passing in function references to HOC
+val input = readLine()
+
+Input?.let{
+	val sentence = it.split(“ “)
+	sentence.map(String::lenght).also(::println)
+}
+
+String::length passes a lambda function of the type ( String ) → Int and ::println passes a lambda function of the type ( Int ) → Unit

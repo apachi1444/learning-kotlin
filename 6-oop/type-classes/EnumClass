@@ -1,0 +1,6 @@
+An enum is a data type that contains fixed set of constants.
+Enum values will take more memory compared to an int constant.
+Because each value in an enum class is treated as an object and each value will take some heap memory to reference the object
+
+* annotations with enum ?
+* enums add at least 2x more bytes to the total APK size than plain constants and can use approximately 5-10 more RAM than equivalent constants.

@@ -1,0 +1,9 @@
+infix fun <A, B, C> ((A) -> B).then(other: (B) -> C): (A) -> C {
+    return { other(this(it)) }
+}
+fun main() {
+  val f1: (Int) -> Double = { it * 100.0 }
+  val f2: (Double) -> Double = { 10.5 - it }
+  val range = 1..10
+  println(range.map(f1 then f2))
+}

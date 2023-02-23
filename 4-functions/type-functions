@@ -1,0 +1,90 @@
+DISCLAIMER :
+function literals :
+are not declared but are passed immediately as an expression
+
+Kotlin functions are first-class that means they can stored into variables and can be passed as arguments to and returned from other high order functions
+// trailing comma
+fun myFunction(
+	firstParameter : Int,
+	secondParameter : Int, // trailing comma
+){}
+
+1- Local functions :
+* can access local vars of outer functions ( the closure )
+
+2- Member functions :
+defined a class or object
+
+3- Lambda functions :
+are code blocks enclosed in curly braces !
+the last expression is considered as a return value
+parameter types in a lambda are optional ( inferred )
+it is used in HOC functions calls !
+
+3-1- Function references can also be used for HOF calls
+val product = items.fold(1,Int::times)
+
+4- Function types :
+such as Int -> String for declarations
+val onClick :() -> Unit = ....
+for the parameters they can be named or not !
+
+val intToLong: Int.(Int) -> Double = { toDouble() }
+println(intToLong(5 add (5) , 5))
+→ this will return 10
+
+val intToLong: Int.(Int) -> Double = { it-> it.toDouble() }
+println(intToLong(5 add (5) , 5))
+→ this will return 5
+( it refers to the second argument and if we do
+this instead it will refers to the first argument
+the receiver I mean )
+
+to make an instance of the function type we should use :
+* use a code block within a function literal
+    * a lambda expression { a , b → a + b  }
+    * an anonymous function : fun ( s : String) : Int {return s.toIntOrNull() ?: 0}
+–- using a callable function:
+* a top-level , local , member or extension function ::idOdd, String::toInt
+* a top-level , member , or extension property : List<Int>::size
+* a constructor  ::Regex
+
+// function types can optionally have an additional receiver
+type which is specified before the dot notation
+
+in general , someObject.someFunction() , the object is acting
+as the receiver for the function
+println has no receiver for example !
+“this” is just a reference to the current receiver !
+Implicit receiver like this.name , we can make it directly name
+* function types with receiver such as A.(B) → C can be instantiated with a special form of function literals function literals with receiver
+Inside the body of the function literal , the receiver object passed to a call becomes an implicit “this”
+example : here is an example of a function literal with receiver along with its type where “plus” is called on the receiver object
+val sum : Int.(Int) → Int = {other → plus(other) }
+a value of function type can be invoked by using its invoke()
+f.invoke() or f()
+
+
+
+
+5- Closure Functions :
+a lambda expression or anonymous function as well as a local function and an object expression can access its closure , which includes the vars declared in the outer scope
+var sum = 0
+ints.filter{
+	it > 0
+}.forEach{
+	sum += it
+}
+print(sum) // so here we get access to the sum variable
+
+
+
+
+6- Extension values / functions
+if you are bound to use the same value in multiple places in your code
+private val String.hostEndIndex : Int
+	get() = indexOf(‘/’,indexOf(“//”) + 2)
+
+use it as myString.hostEndIndex
+
+7-

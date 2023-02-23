@@ -37,3 +37,9 @@ of arguments will finish when we call the function
 
 or to avoid this problem we can use the named parameters
 in our function
+
+- Variable number of arguments ( varargs ) fun asList(vararg ts : T )
+if you want to pass a primitive type array into vararg , you need to convert it to a regular ( typed ) array using the toTypedArray() function
+
+val list = intArrayOf(5, 2, 12, 2)
+testingVarArgParams(*list)

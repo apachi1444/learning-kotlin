@@ -1,0 +1,11 @@
+offer an easy way to handle classes whose main purpose is to hold data.
+They include behavior that we often need when handling data withou the need to explicity write the extra logic.
+
+Compiler auto generates toString ( form User(name  = Yessine , age = 42 ) ) , equals and hashCode
+when you add some properties to the constructor it will add it automatically to the code
+- at least one parameter in the primary constructor and need to be noted with “val” or “var”
+( just a remark we use the val or var to indicate to the
+- we cannot do vararg parameter in the constructor !
+- data classes cannot inherit from other data classes !
+- copy() function
+- componentN() functions corresponding to the properties in their order of declaration

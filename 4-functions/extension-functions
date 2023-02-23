@@ -1,0 +1,5 @@
+– Extensions Functions related to receivers ! Outside the class of course
+fun Greeter.displayAnotherGreeting(){println(...)}
+
+
+this function doesn’t live inside Greeter but it accesses Greeter as if it was a receiver , we’re not actually inside Greeter class ! Which is not a real receiver to distinguish it from the dispatch receiver that exists for functions that are really inside an object !

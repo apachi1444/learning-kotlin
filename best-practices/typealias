@@ -1,0 +1,6 @@
+- Typealias :
+when you have long type names, you can replace them with a synonymous name with the help of typealias
+
+typealias QueryParams = List<Pair<String,String>>
+
+fun getParams ( url : String ) : QueryParams {}

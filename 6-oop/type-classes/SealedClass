@@ -1,0 +1,4 @@
+in enum classes only allow us for a single instance for each value !
+
+- All direct subclasses of a sealed class are known at compile time. No other subclasses may appear outside a module within which the sealed class is defined
+whereas a subclass of a sealed class can have multiple instances, each with its own state.

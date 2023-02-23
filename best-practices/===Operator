@@ -1,0 +1,12 @@
+
+In java , when we override the method equals it will obviously check the memory location
+even if do the equals method we have to call it explicitly
+
+→ then comes Kotlin for solving this issue of overriding the operator equals
+override operator fun equals
+then in the main function
+when we do obj1==obj2 it will compare depending on the logic that we did in the override method !
+
+But if the user want to check for true object equality
+this is where === comes into play
+to check the memory location

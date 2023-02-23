@@ -8,3 +8,34 @@ fun greet(name : String ,reps : Int = 1){
 
 // in the main function when we call the greet function
 greet("Yessine")
+
+
+* When we override methods , the default parameter must be omitted from the signature !
+Open class A {
+	open fun foo(i:Int = 10){}
+}
+class B : A(){
+	override fun foo(i:Int)// no default value is allowed !
+}
+
+* If a default parameter precedes a parameter with no default value we should call the function with names parameters !!!
+
+fun foo(bar : Int = 0 , baz : Int)
+- foo(baz =1) // the default value bar = 0 is used !
+* if we have two default arguments consecutive without a non default parameter it will take care of the first one
+* if we have two default arguments consecutive with a non default parameter we should reset their values again so we will get 3 args
+* if the last argument after default parameters is a lambda , you can pass it either as a named argument or outside the parentheses
+fun foo(bar : Int = 0 , baz : Int = 1 , qux : ()→Unit,){}
+foo(1){println()} // uses the default value baz = 1
+foo(qux = {}) // will use both default values
+foo { println(“jkj”) }
+
+* When calling Java function on the JVM , you can’t use the named arguments syntax because Java bytecode does not always preserve the names of function parameters
+
+- Return Values :
+
+* Unit value : return nothing // return Unit or return is Optional !
+- Single-expression function: fun double(x : Int) : Int = x * 2
+// for the return type it is optional
+// because the compiler can infer this result
+// but it does not infer return types for functions with block bodies because such functions might have such complex control flow in the body
