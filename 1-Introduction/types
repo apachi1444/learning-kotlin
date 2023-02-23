@@ -1,0 +1,18 @@
+* Types :
+type checks and casts:
+* is & !is Operators : to check the type of object at runtime !
+* Smart cast : the compiler is smart enough without explicitly telling them how to cast
+if a negative check leads to a return
+“
+	if ( x !is String ) return
+	prinln(x.length)
+“
+it works also for when expressions & while loops
+it works only when the compiler can guarantee that the variable won’t change between the check and the usage .
+
+“Unsafe” cast operator if the cast operator throws an Exception if the cast is impossible
+so we force him “as” val x : String = y as String
+but what if y is null ? So → change as String?
+But there is a better solution is val x : String? = y as? String
+“This is called “Safe” (nullable) cast operator ”
+returns null on failure !
