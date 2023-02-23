@@ -1,0 +1,6 @@
+indicate that a type parameter of a function or class
+should be replaced with its actual type at runtime
+
+This allows the function or class to use the actual type
+information of the type parameter, rather than treating it
+as a generic type.

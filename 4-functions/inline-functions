@@ -1,16 +1,28 @@
-- Inline functions :
-* they must have a single parameters
-* the parameter must not accept the varargs and “no default value !”
-* they must be member functions or extension functions
-* infix fun Int.shl(x: Int): Int { ... }
-infix fun Int.add(x: Int): Int {
-	 return this + x
+why we ues the inline
+to avoid the waste of time if we call the function and execute a lot of times
+
+- when we have an inline function :
+the code of function is copied and pasted to call point
+the process if faster but it could lead to more memory usage
+
+- inline can also be used with HOF
+
+inline fun repeat(times: Int, action: () -> Unit) {
+    for (i in 0 until times) {
+        action()
+    }
 }
 
-println(45 add 45)
+fun main() {
+    repeat(5) {
+        println("Hello, World!")
+    }
 
-// calling the function using the infix notation
-1 shl 2
+allows the JVM to copy the repeat function code to the call site and
+eliminates the overhead of function call.
 
-// is the same as
-1.shl(2)
+when to use this kind of functions :
+
+* When a function is called frequently and performance is a concern
+* When a function has a small and simple body
+

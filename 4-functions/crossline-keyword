@@ -1,0 +1,26 @@
+to indicate that a lambda function passed as an argument to another
+function should not be able to access the variables from the
+surrounding scope.
+
+--------- Before
+fun foo(block: (String) -> Unit) {
+    val a = "a"
+    block(a)
+}
+
+fun main() {
+    foo { println(it) }
+}
+
+---------- After using the crossline !
+fun foo(crossinline block: (String) -> Unit) {
+    val a = "a"
+    block(a)
+}
+
+when to use it
+* to make it clear that the lambda function can't access the vars from
+the surrounding scope
+*
+
+

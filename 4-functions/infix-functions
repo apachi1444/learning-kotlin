@@ -24,3 +24,19 @@ fun main(args: Array<String>) {
     val result = m square 3
     print("The square of a number is: "+result)
 }
+
+* they must have a single parameters
+* the parameter must not accept the varargs and “no default value !”
+* they must be member functions or extension functions
+* infix fun Int.shl(x: Int): Int { ... }
+infix fun Int.add(x: Int): Int {
+	 return this + x
+}
+
+println(45 add 45)
+
+// calling the function using the infix notation
+1 shl 2
+
+// is the same as
+1.shl(2)

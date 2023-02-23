@@ -1,0 +1,11 @@
+this keyword indicate that a lambda function passed
+as an argument to another function should not be inlined
+
+this means that the lambda will be invoked like a regular function
+
+// noinline next to the lambda expression !
+inline fun repeat(times: Int, noinline action: () -> Unit) {
+    for (i in 0 until times) {
+        action()
+    }
+}
