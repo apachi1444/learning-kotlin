@@ -1,0 +1,13 @@
+an object is a class that has only one instance which is created
+at the time of the initialization.
+
+it is a singleton instance of a class
+
+object MyObject {
+    fun function(){
+        println("hey from the object instance in kotlin")
+    }
+}
+
+-> then call it like this :
+MyObject.function()

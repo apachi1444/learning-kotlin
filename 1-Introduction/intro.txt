@@ -24,7 +24,7 @@ the JDK is the java SDK
 - Int : then press Ctrl + B : open the class in a separate file
 - val exampleNumber  = 28L ( to specify that we need a long number ) : 28 is called "literal"
 
-- to use large numbers we can user "_" : 2_000_000.8
+- to use large numbers we can use "_" : 2_000_000.8
 - double then float
 
 - String is not a primitive variable because the jvm stores that variable differently than
